@@ -1,3 +1,9 @@
 module.exports.run = (bot) => {
-    require('../util/playing.js')(bot)
+    bot.user.setPresence({
+        status: "online",
+        game: {
+            name: "The Tardis!",
+            type: "PLAYING"
+        }
+    })
 }

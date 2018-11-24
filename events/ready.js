@@ -7,6 +7,12 @@ module.exports.run = (client) => {
     Channel Count: ${client.channels.size}
     User Count: ${client.users.size}
     `);
-    require('../util/playing.js')(client)
+    client.user.setPresence({
+        status: "online",
+        game: {
+            name: "The Tardis!",
+            type: "PLAYING"
+        }
+    })
 
 }
