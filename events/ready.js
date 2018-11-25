@@ -8,7 +8,7 @@ module.exports.run = (client) => {
     User Count: ${client.users.size}
     `);
     client.user.setPresence({
-        status: "online",
+        status: "do not disturb",
         game: {
             name: "If you want it, just Kerblam it",
             type: "PLAYING"
