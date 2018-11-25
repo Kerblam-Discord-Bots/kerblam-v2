@@ -1,20 +1,36 @@
 const Discord = require('discord.js');
 module.exports.run = (bot, oldMessage, newMessage) => {
     if (oldMessage.channel.type === "dm") return;
-    if (newMessage.channel.type === "dm") return;
     if (newMessage.author.bot) return;
-    let modlogs = oldMessage.guild.channels.find(c => c.name === "modlogs") || message.guild.channels.find(c => c.name === "🤖modlogs")
+    let modlogs = oldMessage.guild.channels.find(c => c.name === "modlogs");
     if (!modlogs) return;
     let content = oldMessage.content;
     if (content.length === 0) return;
     let content2 = newMessage.content;
-    if (content.length === 0) return;
+    if (content2.length === 0) return;
     if (content === content2) return;
-    let botembed = new Discord.RichEmbed()
-        .setColor("#FF0000")
-        .setTimestamp()
-        .setAuthor(`Message Updated By ${newMessage.author.tag}`, `${newMessage.author.displayAvatarURL}`)
-        .setFooter(`${bot.user.tag}`, `${bot.user.displayAvatarURL}`)
-        .setDescription(`_ _►Content: \n ►Old Message **\`${content}\`** \n ►Update Message **\`${content2}\`** \n ►Channel ${newMessage.channel}`)
-    modlogs.send(botembed);
+    let length = content.length + content2.length;
+  if(length > 2048){
+      let embed = new Discord.RichEmbed()
+          .setColor(`#FF0000`)
+          .setTitle(`Old Message`)
+          .setDescription(`${content}`)
+          .setAuthor(`Message Updated`, oldMessage.author.displayAvatarURL)
+          .addField(`Info`, `**User:** ${oldMessage.author.tag}\n**User ID:** ${oldMessage.author.id}\n**Channel:** ${oldMessage.channel}\n**Channel ID:** ${oldMessage.channel.id}\nNew Message will be down below below :arrow_double_down:`)
+      modlogs.send(embed)
+      let embed2 = new Discord.RichEmbed()
+      .setColor(`#FF0000`)
+      .setTitle(`New Message`)
+      .setDescription(content2)
+      modlogs.send(embed2)
+  }else 
+  if(length < 2040){
+      let embed = new Discord.RichEmbed()
+          .setColor(`#FF0000`)
+          .setTitle(`Content`)
+          .setDescription(`**Old Message: **\n${content}\n\n**New Message: **\n${content2}`)
+          .setAuthor(`Message Updated`, oldMessage.author.displayAvatarURL)
+          .addField(`Info`, `**User:** ${oldMessage.author.tag}\n**User ID:** ${oldMessage.author.id}\n**Channel:** ${oldMessage.channel}\n**Channel ID:** ${oldMessage.channel.id}`)
+      modlogs.send(embed)
+  }
 }
