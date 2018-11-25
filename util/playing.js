@@ -1,7 +1,7 @@
 module.exports = (bot) => {
     bot.user.setActivity(`Public Bot!`, { type: "STREAMING", url: "https://www.twitch.tv/elarabots_discord" });
     var status = [
-        `Public Discord Bot`
+        `If you want it, just Kerblam it`
     ];
     setInterval(() => {
         let gameval = Math.floor((Math.random() * status.length));
