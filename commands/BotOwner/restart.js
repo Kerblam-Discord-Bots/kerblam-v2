@@ -13,6 +13,6 @@ module.exports = class RestartCommand extends Command {
         })
     }
     async run(message){
-        this.client.channels.get("468372950266150916").send(embed).then(message.react('👌')).then(this.client.destroy().then(this.client.login(config.token)).then( await message.say(`Successfully Restarted.`)))
+        message.react('👌').then(this.client.destroy().then(this.client.login(config.token)).then( await message.say(`Successfully Restarted.`)))
     }
 }
