@@ -20,12 +20,12 @@ module.exports = class NCommand extends Command {
     }
     async run(message, {user}) {
         const throwuser = user
-        let replies = [`Banana`, `Car`, `Truck`, `Hot Firemen`, `A Building`,
+        let replies = [`Banana`, `Car`, `Truck`, `Daleks`, `A Building`,
             `SpongeBob`, 'Patrick', 'Nothing', 'Admins', 'Moderators', 'Staff Members',
             'Black Hole', 'Scams', `Love`, `Hate`, `iPhone`, `Brick`, `Bad Bots`, `Chair`,
             `Lemons`, `Cake`, `Pringles`, `Gummy Bears`, `Bus`, `Train`, `Yourself`, `Knife`, `UR MOM`,
-            `SUPERCHIEFYT`, `Babies`, `Chaz`, `VAL`, `SobSyphix`, `Cats`, `Dogs`, `Poop`, `Memes`, `Youtube Streamer`, `Twitch Streamer`,
-            `CaittlinandPJ`, `PJ`, `Sirred90`, `Nev`
+            `BlobHeart`, `Babies`, `Chaz`, `The Doctor`, `Sonic Screwdriver`, `Cats`, `Dogs`, `Cybermen`, `Memes`, `Youtube Streamer`, `Twitch Streamer`,
+            `Clout`, `Tardis`, `Sirred90`, `Nev`
         ]
         let result = Math.floor((Math.random() * replies.length));
         let embed = new Discord.RichEmbed()
