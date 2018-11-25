@@ -28,6 +28,7 @@ bot.registry
         ['information', 'Information Commands'],
         ["fun", "Fun Commands"],
         ["botowner", "Bot Owner Commands"],
+        ["tardis only", "TARDIS only Cmds"],
         ["moderation", "Moderation Commands"],
         ["imagecommands", "Image Commands"],
     ])
