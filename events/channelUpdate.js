@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports.run = (bot, oldChannel, newChannel) => {
-    let modlogs = oldChannel.guild.channels.find(c => c.name === "modlogs");
+    let kerlogs = oldChannel.guild.channels.find(c => c.name === "kerlogs");
     if (!modlogs) return;
     let embed = new Discord.RichEmbed()
         .setColor(`#FF000`)
