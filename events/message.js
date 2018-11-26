@@ -4,7 +4,7 @@ module.exports.run = async (bot, message) => {
         let riddlerrole = message.guild.roles.find(r => r.name === "Riddle Submitted")
         message.member.addRole(riddlerrole)
         message.delete().catch()
-        let riddleanswers = message.guild.channels.find(c => c.name === "elara-log")
+        let riddleanswers = message.guild.channels.find(c => c.name === "kerlogs")
         let riddleembed = new Discord.RichEmbed()
             .setColor(`RANDOM`)
             .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL)
