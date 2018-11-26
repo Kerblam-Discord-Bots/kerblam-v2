@@ -11,7 +11,7 @@ module.exports.run = (client) => {
         status: "Online",
         game: {
             name: "For The Doctor To Return",
-            type: "Wactching"
+            type: "Watching"
         }
     })
 
