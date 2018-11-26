@@ -10,7 +10,7 @@ module.exports.run = (client) => {
     client.user.setPresence({
         status: "online",
         game: {
-            name: "If you want it, just Kerblam it",
+            name: "With Delivery",
             type: "PLAYING"
         }
     })
