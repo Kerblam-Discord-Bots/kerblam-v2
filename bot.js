@@ -30,6 +30,7 @@ bot.registry
         ["botowner", "Bot Owner Commands"],
         ["moderation", "Moderation Commands"],
         ["imagecommands", "Image Commands"],
+        ["tardis", "Tardis Only Commands"]
     ])
     .registerDefaultGroups() // This reqisters the default groups that come with discord.js-commando
     .registerDefaultCommands({ // This registers all of the default commands that come with discord.js-commando
