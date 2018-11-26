@@ -10,8 +10,8 @@ module.exports.run = (client) => {
     client.user.setPresence({
         status: "Online",
         game: {
-            name: "For The Doctor To Return", "With Humans"
-            type: "Watching", "Playing", 
+         name: "For The Doctor To Return",
+            type: "Watching", "Playing",  
        }
     })
 
