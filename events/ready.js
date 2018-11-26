@@ -11,6 +11,7 @@ module.exports.run = (client) => {
         status: "online",
         game: {
             name: "With Delivery",
+                  "kb!help for more info"
             type: "PLAYING"
         }
     })
