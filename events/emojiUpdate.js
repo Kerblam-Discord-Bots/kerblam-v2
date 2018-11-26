@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 module.exports.run = (bot, oldEmoji, newEmoji) => {
-    let modlogs = newEmoji.guild.channels.find(c => c.name === "modlogs");
-    if (!modlogs) return;
+    let kerlogs = newEmoji.guild.channels.find(c => c.name === "kerlogs");
+    if (!kerlogs) return;
     let embed = new Discord.RichEmbed()
         .setColor(`PURPLE`)
         .setThumbnail(newEmoji.url)
@@ -14,5 +14,5 @@ module.exports.run = (bot, oldEmoji, newEmoji) => {
         .addField(`Animated?`, newEmoji.animated, true)
         .setTimestamp(newEmoji.createdAt)
         .setFooter(`Emoji Updated At`)
-    modlogs.send(embed)
+   kerlogs.send(embed)
 }
