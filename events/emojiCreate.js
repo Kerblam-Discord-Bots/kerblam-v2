@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 module.exports.run = async (client, emoji) => {
-    let modlogs = emoji.guild.channels.find(c => c.name === "modlogs");
-    if (!modlogs) return;
+    let kerlogs = emoji.guild.channels.find(c => c.name === "kerlogs");
+    if (!kerlogs) return;
     let embed = new Discord.RichEmbed()
         .setColor(`GREEN`)
         .setThumbnail(emoji.url)
@@ -13,5 +13,5 @@ module.exports.run = async (client, emoji) => {
         .addField(`Animated?`, emoji.animated, true)
         .setTimestamp(emoji.createdAt)
         .setFooter(`Emoji Created At`)
-    modlogs.send(embed)
+    kerlogs.send(embed)
 }
