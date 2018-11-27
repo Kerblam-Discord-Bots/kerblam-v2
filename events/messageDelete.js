@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 module.exports.run = (bot, message) => {
     if (message.channel.type === "dm") return;
     if (message.author.bot) return;
-    let modlogs = message.guild.channels.find(c => c.name === "kerlogs") || message.guild.channels.find(c => c.name === "kerlogs")
+    let kerlogs = message.guild.channels.find(c => c.name === "kerlogs");
     if (!kerlogs) return;
     let image = message.attachments.map(g => g.proxyURL)
     if (message.content === 0) return;
