@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message) => {
     if (message.channel.name === "weekly-riddle-answer") {
         let riddlerrole = message.guild.roles.find(r => r.name === "Riddle Submitted")
-        message.member.addRole(riddlerrole)
+        message.member.addRole(riddlerrole.id)
         message.delete().catch()
         let riddleanswers = message.guild.channels.find(c => c.name === "kerlogs")
         let riddleembed = new Discord.RichEmbed()
