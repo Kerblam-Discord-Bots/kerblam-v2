@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 module.exports.run = async (bot, message) => {
-    if (message.channel.id === "473574603374067732") {
+    if (message.channel.name === "weekly-riddle-ask") {
         let riddlerrole = message.guild.roles.find(r => r.name === "Riddle Submitted")
         message.member.addRole(riddlerrole)
         message.delete().catch()
