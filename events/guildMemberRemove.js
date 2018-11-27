@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 module.exports.run = (bot, member) => {
-    let modlogs = member.guild.channels.find(c => c.name === "modlogs");
-    if (!modlogs) return;
+    let kerlogs = member.guild.channels.find(c => c.name === "kerlogs");
+    if (!kerlogs) return;
     let botembed = new Discord.RichEmbed()
         .setColor("#FF0000")
         .setAuthor('❯\u2000\Member Left', member.user.displayAvatarURL)
@@ -16,5 +16,5 @@ module.exports.run = (bot, member) => {
         })).join(' | ') : '**None**', false)
         .setFooter(`Member Left At`)
         .setThumbnail(member.user.displayAvatarURL)
-    modlogs.send(botembed);
+    kerlogs.send(botembed);
 }
