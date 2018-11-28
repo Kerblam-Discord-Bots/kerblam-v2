@@ -72,7 +72,7 @@ module.exports = class NCommand extends Command {
             }
             message.channel.send(response);
         } else {
-            message.channel.send(`You need to use \`e!rps\` <rock|paper|scissors>`);
+            message.channel.send(`You need to use \`kb!rps\` <rock|paper|scissors>`);
         }
     }
 }
