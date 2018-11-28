@@ -9,7 +9,7 @@ module.exports = class NCommand extends Command {
             aliases: ["req"], // Add any aliases to this command, like [`name here`, `other name here`] etc
             examples: ["kb!req"], // Give a example of how to do the command 
             description: "This is requirements when you add Kerblam",
-            group: "informantion" // Enter the group name for the command to go into all of the group names is found in bot.js at the bottom like fun
+            group: "information" // Enter the group name for the command to go into all of the group names is found in bot.js at the bottom like fun
         })
     }
     async run(message) {
