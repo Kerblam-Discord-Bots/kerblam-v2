@@ -1,6 +1,6 @@
 
-const {Command} = require('discord.js-commando'), // This requires the discord.js-command npm package
- Discord = require('discord.js'); // This requires the discord.js npm package, This is mostly used for stuff like RichEmbed etc. 
+const { Command } = require('discord.js-commando'), // This requires the discord.js-command npm package
+    Discord = require('discord.js'); // This requires the discord.js npm package, This is mostly used for stuff like RichEmbed etc. 
 module.exports = class NCommand extends Command {
     constructor(client) {
         super(client, {
@@ -10,10 +10,10 @@ module.exports = class NCommand extends Command {
             examples: ["kb!req"], // Give a example of how to do the command 
             description: "This is requirements when you add Kerblam",
             group: "informantion" // Enter the group name for the command to go into all of the group names is found in bot.js at the bottom like fun
-        }
+        })
     }
     async run(message) {
-         let reqembed = new Discord.RichEmbed()
+        let reqembed = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
             .setDescription(`All what kerblam requires for after you add it here are some ground rules
@@ -21,7 +21,6 @@ module.exports = class NCommand extends Command {
     2. Do not have Kerblam spam dms for cussing
     3. Kerblam is not used for abuse,
     if these are broken and if the owners of kerblam find out. they will have it leave`)
-         message.channel.send(reqembed)   
-        
-} 
+        message.channel.send(reqembed)
+    }
 }
