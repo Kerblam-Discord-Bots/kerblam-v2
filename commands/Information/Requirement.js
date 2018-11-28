@@ -16,7 +16,7 @@ module.exports = class NCommand extends Command {
     } let replies = ["All what kerblam requires for after you add it here are some ground rules
     1. Kerblam will not be used to harras 
     2. Do not have Kerblam spam dms for cussing
-    3. Kerblam is not used for abuse
+    3. Kerblam is not used for abuse,
     if these are broken and if the owners of kerblam find out. they will have it leave"]
          let result = Math.floor((Math.random() * replies.length));
          let reqembed = new Discord.RichEmbed()
