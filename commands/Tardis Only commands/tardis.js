@@ -3,8 +3,8 @@ const { Command } = require('discord.js-commando'), // This requires the discord
 module.exports = class NCommand extends Command {
     constructor(client) {
         super(client, {
-            name: "requirement", // the command name goes here
-            memberName: "requirement", // this is the same as the name above ^ 
+            name: "tardis", // the command name goes here
+            memberName: "tardis", // this is the same as the name above ^ 
             aliases: ["tardis"], // Add any aliases to this command, like [`name here`, `other name here`] etc
             examples: ["kb!tardis"], // Give a example of how to do the command 
             description: "The Tardis loves The Doctor only the Doctor",
@@ -16,6 +16,6 @@ module.exports = class NCommand extends Command {
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
             .setDescription(`The Tardis has a mind of its own and The Doctor loves the Tardis`)
-        message.channel.send(reqembed)
+        message.channel.send(tarembed)
     }
 }
