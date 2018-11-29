@@ -12,8 +12,7 @@ module.exports = class NCommand extends Command {
         })
     }
         async run(message) {
-        let reqembed = new Discord.RichEmbed()
-            .setAuthor(message.author.tag, message.author.displayAvatarURL)
+        let reqembed = new Discord.RichEmbed
             .setColor("#000FF")
             .setDescription(`Hello Everyone Welcome to the TARDIS here are a few rules you need to follow.
 #1 Respect The Tardis and EVERYONE you talk to
