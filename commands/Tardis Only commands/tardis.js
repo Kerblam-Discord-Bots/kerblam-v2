@@ -16,6 +16,6 @@ module.exports = class NCommand extends Command {
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
             .setDescription(`The Tardis has a mind of its own and The Doctor loves the Tardis`)
-        message.channel.send(tarembed)
+        message.channel.send(tardisembed)
     }
 }
