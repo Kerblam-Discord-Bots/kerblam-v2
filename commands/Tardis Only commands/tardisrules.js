@@ -15,7 +15,17 @@ module.exports = class NCommand extends Command {
         let reqembed = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
-            .setDescription(`Test o.o`)
+            .setDescription(`Hello Everyone Welcome to the TARDIS here are a few rules you need to follow and some faq
+#1 Respect The Tardis and EVERYONE you talk to
+#2 Don’t cuss
+#3 Do not ask for Sonic Screwdriver role (Moderator)
+#4 if you’re my irl friend you’ll have to follow the rules it doesnt mean you can break them
+#6 The Tardis is for having fun and making friends DO not start drama or talk about Drama
+#7 Do not test the Tardis word filter, it will get you banned off the tardis
+#8 you can call me “Coco” if you want i don’t care
+#9 Do not DM anyone rude stuff from anyone from The Tardis
+#10 Tardis Staff Decisions are final do not argue
+#11 Please DONT Share personal info,`)
         message.channel.send(reqembed)
     }
 }
