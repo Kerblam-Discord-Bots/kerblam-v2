@@ -15,7 +15,6 @@ module.exports = class NCommand extends Command {
         let reqembed = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
-            .setImage(message.guild.iconURL)
             .setDescription(`Test o.o`)
         message.channel.send(reqembed)
     }
