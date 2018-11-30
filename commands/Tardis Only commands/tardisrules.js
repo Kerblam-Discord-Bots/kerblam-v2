@@ -33,7 +33,6 @@ module.exports = class NCommand extends Command {
 #16 Doctor can break the Tardis Rules, except for rules of time
 #17 Do not ping Doctor. he can see the Tardis chat 24/7
 #18 Inappropriate Images of "Anime" or anything else is prohibited
-#19 Do NOT dm Doctor for unimportant reasons. you can only dm him reports of what people did wrong in the TARDIS or unexpected behavior from Moderators.,`)
-        message.channel.send(reqembed)
+#19 Do NOT dm Doctor for unimportant reasons. you can only dm him reports of what people did wrong in the TARDIS or unexpected behavior from Moderators.,`)  message.channel.send(reqembed)
     }
 }
