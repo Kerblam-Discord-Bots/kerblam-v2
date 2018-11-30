@@ -6,7 +6,7 @@ module.exports = class NCommand extends Command {
         super(client, {
             name: "tardis", // the command name goes here
             memberName: "tardisrules", // this is the same as the name above ^ 
-            aliases: ["tardis"], // Add any aliases to this command, like [`name here`, `other name here`] etc
+            aliases: ["tardisrules"], // Add any aliases to this command, like [`name here`, `other name here`] etc
             examples: ["kb!tardisrules"], // Give a example of how to do the command 
             description: "The Tardis Rules",
             group: "tardis" // Enter the group name for the command to go into all of the group names is found in bot.js at the bottom like fun
