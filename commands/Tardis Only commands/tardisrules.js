@@ -13,6 +13,7 @@ module.exports = class NCommand extends Command {
     }
         async run(message) {
         let reqembed = new Discord.RichEmbed
+            .setFooter(client.user.tag, client.user.displayAvatarURL)
             .setDescription(`Hello Everyone Welcome to the TARDIS here are a few rules you need to follow.
 #1 Respect The Tardis and EVERYONE you talk to
 #2 Don’t cuss
