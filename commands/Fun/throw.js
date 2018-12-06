@@ -25,7 +25,7 @@ module.exports = class NCommand extends Command {
             'Black Hole', 'Scams', `Love`, `Hate`, `iPhone`, `Brick`, `Bad Bots`, `Chair`,
             `Lemons`, `Cake`, `Sonic Gauntlet`, `Gummy Bears`, `Bus`, `Train`, `Yourself`, `Knife`, `UR MOM`,
             `BlobHeart`, `The Master`, `KSI`, `The Doctor`, `Sonic Screwdriver`, `Cats`, `Dogs`, `Cybermen`, `Memes`, `Youtube Streamer`, `Twitch Streamer`,
-            `Clout`, `Tardis`, `Sirred90`, `Nev`
+            `Clout`, `Tardis`, `GDad`, `Nev`
         ]
         let result = Math.floor((Math.random() * replies.length));
         let embed = new Discord.RichEmbed()
