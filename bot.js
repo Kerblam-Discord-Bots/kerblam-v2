@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const Discord = require('discord.js');
 const bot = new CommandoClient({ 
-    commandPrefix: "kb!", // This is the bots global prefix
+    commandPrefix: "jd!", // This is the bots global prefix
     unknownCommandResponse: false, // This is so the bot doesn't reply if the command names are off
     owner: ["288491554841034752", "440810964061913119"], // Your User ID here
     invite: "https://discord.gg/cmymsAY", // The Invite to your bot support server here.
