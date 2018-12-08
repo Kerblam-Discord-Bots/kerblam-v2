@@ -16,6 +16,7 @@ module.exports.run = (client) => {
     })
 
 }
+
 let embed = new Discord.RichEmbed()
     .setColor(`#FF000`)
     .setTimestamp()
