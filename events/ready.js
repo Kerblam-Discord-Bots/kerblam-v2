@@ -16,9 +16,3 @@ module.exports.run = (client) => {
     })
 
 }
-
-let embed = new Discord.RichEmbed()
-    .setColor(`#FF000`)
-    .setTimestamp()
-    .setDescription(`${client.user} has connected`)
-    client.channels.get("521066410345103360").send(embed)
