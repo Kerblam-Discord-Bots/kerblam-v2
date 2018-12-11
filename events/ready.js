@@ -11,7 +11,7 @@ module.exports.run = (client) => {
         status: "Online",
         game: {
          name: "to use Kerblam Commands use kb!help",
-         type: "WATCHING"
+         type: "PLAYING"
        }
     })
 
