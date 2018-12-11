@@ -15,7 +15,7 @@ module.exports = class NCommand extends Command {
         let reqembed = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
-            .setDescription(`The Tardis has a mind of its own and The Doctor loves the Tardis`)
+            .setDescription(`Time And Relative In Space. thats what TARDIS means.`)
         message.channel.send(reqembed)
     }
 }
