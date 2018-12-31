@@ -1,4 +1,4 @@
-const {Command} = require('../../util/Commando'),
+const {Command} = require('discord.js-commando'),
 Discord = require('discord.js');
 module.exports = class NCommand extends Command {
          constructor(client) {
