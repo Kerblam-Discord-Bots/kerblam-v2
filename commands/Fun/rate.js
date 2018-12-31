@@ -27,7 +27,7 @@ module.exports = class NCommand extends Command {
         .setTitle(`Rating`)
         .setTimestamp()
         if(user.id === "288491554841034752" || this.client.isOwner(user.id)){
-        e.setDescription(`10/10`)
+        e.setDescription(`10/100`)
         }else{
             e.setDescription(`${random}/10`)
         }
