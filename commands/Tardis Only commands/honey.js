@@ -16,6 +16,6 @@ module.exports = class NCommand extends Command {
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
             .setDescription(`🍯GIMME THAT HONEYYYY!🍯`)
-        message.channel.send(honembed)
+        message.channel.send(reqembed)
     }
 }
