@@ -23,6 +23,6 @@ module.exports = class SayCommand extends Command {
 
     async  run(msg, { content }) {
         msg.delete().catch()
-        msg.say(reqembed);
+        msg.say(content);
     }
 };
