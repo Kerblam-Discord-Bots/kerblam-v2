@@ -29,6 +29,7 @@ module.exports = class BotinfoCommand extends Command {
             .addField(`Bot Owner(s)`, this.client.owners, true)
             .addField("Created On", `**${this.client.user.createdAt}**`, true)
             .addField("Invite Link", `[Click Here](https://discordapp.com/oauth2/authorize?client_id=${this.client.user.id}&permissions=8&scope=bot)`, true)
+            .addFiedl("Twitter:, `[Click Here](https://twitter.com/kerblamdiscord)`, true)
             .addField(`Servers`, string)
             .setFooter(`Requested By ${message.author.tag}`, message.author.displayAvatarURL);
         message.say(botembed)
