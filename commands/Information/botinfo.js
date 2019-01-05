@@ -30,7 +30,7 @@ module.exports = class BotinfoCommand extends Command {
             .addField("Created On", `**${this.client.user.createdAt}**`, true)
             .addField("Invite Link", `[Click Here](https://discordapp.com/oauth2/authorize?client_id=${this.client.user.id}&permissions=8&scope=bot)`, true)
             .addField("Twitter", `[Click Here](https://twitter.com/kerblamdiscord)`, true)
-            .addField("TARDIS",  `[Click Here](
+            .addField("TARDIS",  `[Click Here](https://discord.gg/xSJ55Et)`, true)
             .addField(`Servers`, string)
             .setFooter(`Requested By ${message.author.tag}`, message.author.displayAvatarURL);
         message.say(botembed)
