@@ -8,8 +8,8 @@ module.exports = class NCommand extends Command {
             aliases: [], // Add any aliases to this command, like [`name here`, `other name here`] etc
             examples: ["kb!food"], // Give a example of how to do the command 
             description: "test",
-            group: "tardis" //
-            ownerOnly: true 
+            group: "tardis",
+            ownerOnly: true,
          }}
     }
      async run (message){
