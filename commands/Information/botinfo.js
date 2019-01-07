@@ -27,7 +27,7 @@ module.exports = class BotinfoCommand extends Command {
             .addField(`ID`, this.client.user.id, true)
             .addField(`Discriminator`, `#${this.client.user.discriminator}`, true)
             .addField(`Bot Owner(s)`, this.client.owners, true)
-            .addField(`Deveoloper(s)`, this.client.devolopers, true)
+            .addField(`Developer(s)`, this.client.developer, true)
             .addField("Created On", `**${this.client.user.createdAt}**`, true)
             .addField("Invite Link", `[Click Here](https://discordapp.com/oauth2/authorize?client_id=${this.client.user.id}&permissions=8&scope=bot)`, true)
             .addField("Twitter", `[Click Here](https://twitter.com/kerblamdiscord)`, true)
