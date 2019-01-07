@@ -7,7 +7,7 @@ const bot = new CommandoClient({
     commandPrefix: "kb!", // This is the bots global prefix
     unknownCommandResponse: false, // This is so the bot doesn't reply if the command names are off
     owner: ["288491554841034752"], // Your User ID here
-    devoloper: ["398959444756529155","502971316668858378"],
+    developer: ["398959444756529155","502971316668858378"],
     invite: "https://discord.gg/cmymsAY",
     Twitter: "https://twitter.com/kerblamdiscord",
 
