@@ -26,7 +26,6 @@ module.exports = class NCommand extends Command {
         })
     }
     async run(message, { member, warning }) {
-        let Moderatoruser = message.author.id;
         let reason = warning;
         let rUser = member
         let kerlogs = message.guild.channels.find(c => c.name === "kerlogs");
@@ -39,12 +38,12 @@ module.exports = class NCommand extends Command {
         rUser.send(dmembed)
         const warnembed = new Discord.RichEmbed()
             .setColor(`#ff0000`)
-            .addField(`Warned User`, `<@${rUser.id}>`, true)
-            .addField(`Moderator`, `<@${Moderatoruser}>`, true)
+            .addField(`Warned User`, rUser, true)
+            .addField(`Moderator`, message.author, true)
             .addField(`Reason`, `${reason}`)
             .setTimestamp()
-            .setFooter(`ID: ` + `${rUser.id}`, rUser.avatarURL)
-        modlogs.send(warnembed);
+            .setFooter(`ID: ${rUser.id}`, rUser.avatarURL)
+        kerlogs.send(warnembed);
         await message.delete().catch();
     }
 }
