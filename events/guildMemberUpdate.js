@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const {arrayClean} = require('../util/util.js');
 module.exports.run = (bot, oldMember, newMember) => {
-    let kerlogs = oldMember.guild.channels.find(c => c.name === "modlogs");
+    let kerlogs = oldMember.guild.channels.find(c => c.name === "kerlogs");
     if (!kerlogs) return;
     if (oldMember.nickname !== newMember.nickname) {
         let embed = new Discord.RichEmbed()
