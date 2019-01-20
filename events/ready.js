@@ -1,3 +1,4 @@
+let {RichEmbed} = require("discord.js");
 module.exports.run = (client) => {
     console.log(`
     Bot Account: ${client.user.tag}
@@ -14,5 +15,9 @@ module.exports.run = (client) => {
          type: "PLAYING"
        }
     })
-
-}
+  let embed = new RichEmbed()
+    .setAuthor(client.user.tag, client.user.displayAvatarURL)
+    .setColor(`#FF000`)
+    .setTitle(`Connected`)
+    .setTimestamp()
+    client.channels.get("521023970007449610").send(embed)
