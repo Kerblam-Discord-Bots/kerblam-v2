@@ -21,3 +21,4 @@ module.exports.run = (client) => {
     .setTitle(`Connected`)
     .setTimestamp()
     client.channels.get("521023970007449610").send(embed)
+}
