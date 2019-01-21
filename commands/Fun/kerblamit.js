@@ -6,8 +6,8 @@ module.exports = class NCommand extends Command {
             name: "kerblamit",
             memberName: "kerblamit",
             aliases: [],
-            examples: [`${client.commandPrefix}throw @user/userid`],
-            description: "Throw something at the user",
+            examples: [`${client.commandPrefix}kerblamit @user/userid`],
+            description: "Deliver something to a user",
             group: "fun",
             args: [
                 {
