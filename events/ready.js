@@ -18,7 +18,7 @@ module.exports.run = (client) => {
   let embed = new RichEmbed()
     .setAuthor(client.user.tag, client.user.displayAvatarURL)
     .setColor(`#FF000`)
-    .setTitle(`Connected`)
+    .setTitle(`Kerblam Online`)
     .setTimestamp()
     client.channels.get("521023970007449610").send(embed)
 }
