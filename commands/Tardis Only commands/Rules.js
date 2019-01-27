@@ -16,7 +16,7 @@ module.exports = class StaffCommand extends Command {
     async run(message) {
         let bicon = ("https://cdn.discordapp.com/attachments/444028025932349441/445611500246269972/alert.gif");
         let botembed = new Discord.RichEmbed()
-            .setDescription("The Rules Of The Tardis")
+            .setDescription("The Rules Of The Tardis and info")
             .setColor("#000FF")
             .setThumbnail(bicon)
             .addField("Info", "The Tardis has a mind of its own please do NOT call it a Server")
