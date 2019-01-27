@@ -14,7 +14,7 @@ module.exports = class StaffCommand extends Command {
         })
     }
     async run(message) {
-        let bicon = ("https://cdn.discordapp.com/attachments/529525290528145409/539198164800897024/image0.gif");
+        let bicon = ("https://cdn.discordapp.com/attachments/529525290528145409/539197734058459147/image0.jpg");
         let botembed = new Discord.RichEmbed()
             .setDescription("The Rules Of The Tardis and info")
             .setColor("#000FF")
