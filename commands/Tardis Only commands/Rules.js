@@ -26,6 +26,7 @@ module.exports = class StaffCommand extends Command {
             .addField("AutoBan", "1. Not listening to staff after being warned Alot   2. Pornographic, disturbing content, or racism.  3. Links to Porn or Racism Sites disturbing stuff   4. Impersonate another human or Bot.   5. Snipping In the Discord   6. No Drama From Other Servers, after being told to stop and not doing so.")
             .addBlankField()
             .addField("Playing Status and Profile Photo And Usernames", "Shouldn't have Cursing or nothing to bad or a Tardis Staff will contact you to change it")
+            .addBlankField()
             .addField("Coco's IRL Friends", "if you are Coco's IRL Friends and your new to discord. you have no right to criticize Coco or The Tardis itself and no right to break the rules")
         message.channel.send(botembed);
         message.delete().catch();
