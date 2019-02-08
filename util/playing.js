@@ -1,5 +1,5 @@
 module.exports = (bot) => {
-    bot.user.setActivity(`Public Bot!`, { type: "STREAMING", url: "https://www.twitch.tv/elarabots_discord" });
+    bot.user.setActivity(`Kerblam is always watching`, { type: "STREAMING", url: "https://www.twitch.tv/elarabots_discord" });
     var status = [
         `If you want it, just Kerblam it`
     ];
