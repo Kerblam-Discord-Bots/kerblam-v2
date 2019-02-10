@@ -7,7 +7,7 @@ module.exports = class SayCommand extends Command {
             name: 'spoilerannounce',
             group: 'moderation',
             memberName: 'spoilerannounce',
-            description: 'Sends a message to the channel',
+            description: 'Sends a spoiler message to the channel',
             aliases: ["embedspoiler"],
             examples: [`${client.commandPrefix}announce #channel Hi there!`],
             guildOnly: true,
