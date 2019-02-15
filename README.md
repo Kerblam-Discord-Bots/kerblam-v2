@@ -1,2 +1,2 @@
 # kerblam
-this repository is not for public.
+# note: You will not recive any support from Doctor
