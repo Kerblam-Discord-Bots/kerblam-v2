@@ -24,6 +24,7 @@ module.exports = class NCommand extends Command {
             .addField(`Instagram`, `[Click Here](https://www.instagram.com/imactuallycoco/)`, true)
             .addField(`Discord`, `**${this.client.users.get('288491554841034752').tag}**`, true)
             .addField(`Discord Server`, `[Click Here](https://discord.gg/xSJ55Et)`, true)
+            .addField(`Reddit`, `[Click Here](https://www.reddit.com/r/ImReallyCoco/?st=JS7PQRY6&sh=1087efb9)`,true)
         message.channel.send(embed)
     }
 }
