@@ -17,8 +17,6 @@ module.exports = class NCommand extends Command {
         message.delete().catch()
         let embed = new RichEmbed()
             .setColor(`BLUE`)
-            .setAuthor(`${this.client.users.get('288491554841034752').tag}`, this.client.users.get('288491554841034752').displayAvatarURL)
-            .setThumbnail(this.client.users.get('288491554841034752').displayAvatarURL)
             .setTitle(`Links and Infomation`)
             .addField(`Twitter`, `[Click Here](https://twitter.com/ImReallyCoco)`, true)
             .addField(`Instagram`, `[Click Here](https://www.instagram.com/imactuallycoco/)`, true)
