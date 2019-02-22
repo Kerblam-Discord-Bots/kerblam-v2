@@ -23,8 +23,7 @@ module.exports = class StaffCommand extends Command {
             .addBlankField()
             .addField("AutoBan", "1. Not listening to Tardis staff after being warned Alot                                                      2. Pornographic, disturbing content, or racism.                                        3. Links to Porn or Racism Sites disturbing stuff                                                                                4. Impersonate another person or Bot.                                                                  5. Snipping In the Discord                                                                                                                            6. No Drama From Other Servers, after being told to stop and not doing so.")
             .addField("FOR EMERGENCYS ONLY", "In Case of an Emergency if someone is Cussing or sending bad photos links etc. Please tag <@&490168027049099285>")
-            .setImage("https://cdn.discordapp.com/attachments/444028025932349441/445612424545042453/tenor_1.gif")
-            .addField("if you're Friends with The Doctor in real life in his school or not, The Doctor/Coco will NOT allow you to say his Real name or allow you to break the Rules. We care for his safety")
+            .addField("if you're Friends with The Doctor in real life in his school , The Doctor/Coco will NOT allow you to say his Real name or allow you to break the Rules. We care for his safety")
         message.channel.send(botembed);
         message.delete().catch();
     }
