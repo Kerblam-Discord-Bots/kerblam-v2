@@ -7,7 +7,7 @@ module.exports = class NCommand extends Command {
             memberName: "tardisinvite",
             group: "tardis",
             aliases: [],
-            description: "Posts the Information for the Information channel",
+            description: "Posts the Link to The Tardis (Coco's Server)",
             examples: [`${client.commandPrefix}links`],
             guildOnly: true,
             userPermissions: ["ADMINISTRATOR"]
