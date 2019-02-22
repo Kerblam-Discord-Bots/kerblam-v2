@@ -14,9 +14,8 @@ module.exports = class StaffCommand extends Command {
         })
     }
     async run(message) {
-        let bicon = ("https://cdn.discordapp.com/attachments/444028025932349441/445611500246269972/alert.gif");
         let botembed = new Discord.RichEmbed()
-           .setDescription("The Rules Of The Doctor")
+           .setDescription("The Rules Of The Tardis")
         .setColor("#000FF")
         .setThumbnail(bicon)
         .addField("General Rules", "1. Do not agrue with the Tardis Staff or The Doctor\n2. No cursing in the Tardis incuding Voice chat's\n3. Listen to and work with staffs, not against them.\n4. No text spamming and cussing in the text channels\n5. No mic spamming and cussing in the voice channels.\n6. Trolling and bullying is not allowed in any form.\n7. No self bots")
