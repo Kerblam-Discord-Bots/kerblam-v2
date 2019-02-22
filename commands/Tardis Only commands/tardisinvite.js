@@ -16,7 +16,7 @@ module.exports = class NCommand extends Command {
     async run(message) {
         message.delete().catch()
         let embed = new RichEmbed()
-            .addfield(`Tardis Invite`, `[Click Here](https://discord.gg/NeM886f)`, true)
+            .addField(`Tardis Invite`, `[Click Here](https://discord.gg/NeM886f)`, true)
             .setDescription(`**This is The Owner's Server**`)
         message.channel.send(embed)
     }
