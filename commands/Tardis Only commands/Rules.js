@@ -24,3 +24,5 @@ module.exports = class StaffCommand extends Command {
         .addField("FOR EMERGENCYS ONLY", "In Case of an Emergency if someone is Cussing or sending bad photos links etc. Please tag <@&490168027049099285>")
     message.channel.send(botembed);
     message.delete().catch();
+ }
+}
