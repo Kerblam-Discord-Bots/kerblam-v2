@@ -5,7 +5,7 @@ module.exports = class SayCommand extends Command {
     constructor(client) {
         super(client, {
             name: 'announce',
-            group: 'moderation',
+            group: 'admin',
             memberName: 'announce',
             description: 'Sends a message to the channel',
             aliases: ["embed"],
