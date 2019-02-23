@@ -15,7 +15,7 @@ module.exports = class NCommand extends Command {
         let reqembed = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.displayAvatarURL)
             .setColor("#000FF")
-            .setDescription(`Honey, Fish , Fish , Fish , Raw Fish , Cooked fish , real fish`)
+            .setDescription(`Just Junk food xD`)
         message.channel.send(reqembed)
     }
 }
