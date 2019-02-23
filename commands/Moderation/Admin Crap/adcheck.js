@@ -4,7 +4,7 @@ module.exports = class AdCheckCommand extends Command {
     constructor(client){
         super(client, {
             name: "adcheck",
-            group: "moderation",
+            group: "admin",
             aliases: [],
             memberName: "adcheck",
             guildOnly: true,
