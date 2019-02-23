@@ -21,6 +21,8 @@ module.exports = class StaffCommand extends Command {
         .addBlankField()
         .addField("AutoBan", "1. Not listening to staff after being warned Alot\n2. Pornographic, disturbing content, or racism.\n3. Links to Porn or Racism Sites disturbing stuff\n4. Impersonate another person or Bot.\n5. Snipping In the Discord\n6. No Drama From Other Servers, after being told to stop and not doing so.")
         .addBlankField()
+        .addField("Tardis Eternal Invite", `[Click Here](https://discord.gg/NeM886f)
+        .addBlankField()
         .addField("FOR EMERGENCYS ONLY", "In Case of an Emergency if someone is Cussing or sending bad photos links etc. Please tag <@&490168027049099285>")
     message.channel.send(botembed);
     message.delete().catch();
