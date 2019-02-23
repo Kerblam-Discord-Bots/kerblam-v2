@@ -6,7 +6,7 @@ module.exports = class LockDownCommand extends Command {
             name: "adminperm",
             memberName: "adminperm",
             aliases: [],
-            group: "moderation",
+            group: "admin",
             guildOnly: true,
             userPermissions: ["MANAGE_GUILD", "ADMINISTRATOR"],
             examples: [`${client.commandPrefix}adminperm <#Channel/ChannelID> <Role Name/ID here>`],
