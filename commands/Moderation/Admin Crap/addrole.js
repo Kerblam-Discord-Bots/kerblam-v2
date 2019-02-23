@@ -5,7 +5,7 @@ module.exports = class AddRoleCommand extends Command {
    constructor(client) {
        super(client, {
            name: "addrole",
-           group: "moderation",
+           group: "admin",
            aliases: ["role+"],
            memberName: "addrole",
            description: "Adds a role to a user",
@@ -28,8 +28,8 @@ module.exports = class AddRoleCommand extends Command {
    }
 
     async run(message, {member, role}) {
-        let modlogs = message.guild.channels.find(c => c.name === "modlogs");
-        if(!modlogs) modlogs = message.channel;
+        let kerlogs = message.guild.channels.find(c => c.name === "kerlogs");
+        if(!kerlogs) modlogs = message.channel;
         if (member.roles.has(role.id)) return message.say("They already have that role.");
         await (member.addRole(role.id));
         let embed = new Discord.RichEmbed()
@@ -41,6 +41,6 @@ module.exports = class AddRoleCommand extends Command {
             .addField(`Moderator`, message.author, true)
             .setThumbnail(member.user.displayAvatarURL)
             .setTimestamp()
-            modlogs.send(embed)
+            kerlogs.send(embed)
     }
 };
