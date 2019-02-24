@@ -31,7 +31,7 @@ module.exports = class LSCommand extends Command {
             let embed = new Discord.RichEmbed()
             .setColor(`#FF0000`)
             .setAuthor(this.client.user.username, this.client.user.displayAvatarURL)
-            .setDescription(`I have been removed from this server, For more information please contact [${this.client.owners[0].tag}](https://discord.gg/hgsM86w)`)
+            .setDescription(`Kerblam has been removed from this server rather your server is dead or being used for **HORRIBLE** stuff For more information please contact [${this.client.owners[0].tag}](https://discord.gg/hgsM86w)`)
             defaultChannel.send(embed).then(guild.leave());
     }
 }
