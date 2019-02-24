@@ -40,6 +40,6 @@ module.exports = {
     ],
     boops: 
         ["https://cdn.discordapp.com/attachments/444028025932349441/447035410846318593/tenor_2.gif", "https://media1.tenor.com/images/cc6d3dfe2608fe8814aad379c398b93c/tenor.gif?itemid=7296714",
-         "https://media1.tenor.com/images/5ba05529a05a714f93900d79164edca9/tenor.gif?itemid=3577615", "https://media1.tenor.com/images/c3f302be7b09f30965a513e0e45d02c2/tenor.gif?itemid=4698601", "https://media1.tenor.com/images/1f7c2d7bc8587e9ec4422a8d1af73f82/tenor.gif?itemid=7479077", "https://media1.tenor.com/images/ea37d5c281b7ca7c35175bdc854b0a5b/tenor.gif?itemid=11159084", "https://media1.tenor.com/images/7abde695bf76df9a228a2e879250f492/tenor.gif?itemid=11515298"
+         "https://media1.tenor.com/images/5ba05529a05a714f93900d79164edca9/tenor.gif?itemid=3577615", "https://media1.tenor.com/images/c3f302be7b09f30965a513e0e45d02c2/tenor.gif?itemid=4698601", "https://media1.tenor.com/images/1f7c2d7bc8587e9ec4422a8d1af73f82/tenor.gif?itemid=7479077", "https://media1.tenor.com/images/ea37d5c281b7ca7c35175bdc854b0a5b/tenor.gif?itemid=11159084", "https://media1.tenor.com/images/7abde695bf76df9a228a2e879250f492/tenor.gif?itemid=11515298"      
 ]
 }
