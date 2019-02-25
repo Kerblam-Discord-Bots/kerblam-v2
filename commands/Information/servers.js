@@ -8,7 +8,8 @@ module.exports = class NCommand extends Command {
             aliases: [],
             examples: [`${client.commandPrefix}servers`],
             description: "Gives you the names of the servers the bot is currently in.",
-            group: "information"
+            group: "information",
+            ownerOnly: true
         })
     }
     async run(message) {
