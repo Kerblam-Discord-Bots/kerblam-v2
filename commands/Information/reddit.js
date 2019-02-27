@@ -10,6 +10,7 @@ module.exports = class NCommand extends Command {
             examples: [`${client.commandPrefix}reddit Pug`],
             description: "Gives you a random reddit post from the thing you search for.",
             group: "information",
+            nsfw: true,
             args: [
                 {
                     key: 'content',
