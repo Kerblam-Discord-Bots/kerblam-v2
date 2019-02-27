@@ -10,6 +10,7 @@ module.exports = class NCommand extends Command {
             examples: ["e!wiki McDonalds"],
             description: "Gives you the wikipedia result for what you search for.",
             group: "information",
+            nsfw: true,
             args: [
                 {
                     key: 'content',
