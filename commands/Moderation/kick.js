@@ -41,10 +41,10 @@ module.exports = class NCommand extends Command {
             .addField("Moderator", `<@${message.author.id}>`, true)
             .addField("Reason", bReason)
             .setFooter(`${bUser.id}`)
-        let modlogs = message.guild.channels.find(c => c.name === "modlogs")
-        if (!modlogs) modlogs = message.channel;
+        let kerlogs = message.guild.channels.find(c => c.name === "kerlogs")
+        if (!kerlogs) kerlogs = message.channel;
         message.guild.member(bUser).kick(bReason);
         message.delete().catch();
-        await modlogs.send(banEmbed)
+        await kerlogs.send(banEmbed)
     }
 }
