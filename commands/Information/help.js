@@ -1,137 +1,138 @@
-const { splitMessage } = require('discord.js');
-const { stripIndents, oneLine } = require('common-tags');
-const {Command} = require('discord.js-commando');
-const { disambiguation } = require('util');
-const Discord = require('discord.js');
+const Discord = require('discord.js'),
+    pageemo = ["🏠", "🛠", "🎉", "❔", "🔠", "🏅", "👌"];
 
-module.exports = class HelpCommand extends Command {
-    constructor(client) {
-        super(client, {
-            name: 'help',
-            group: 'information',
-            memberName: 'help',
-            aliases: ['commands'],
-            description: 'Displays a list of available commands, or detailed information for a specified command.',
-            details: oneLine`
-				The command may be part of a command name or a whole command name.
-				If it isn't specified, all available commands will be listed.
-			`,
-            examples: [`${client.commandPrefix}help`, `${client.commandPrefix}help prefix`],
-            guarded: true,
 
-            args: [{
-                key: 'command',
-                prompt: 'Which command would you like to view the help for?',
-                type: 'string',
-                default: ''
-            }]
+const pages = [
+	{
+		title: "Help Menu",
+		description: `
+${pageemo[0]} to return **Home**.
+${pageemo[1]} for **Moderation Commands**.
+${pageemo[2]} for **Fun Commands**.
+${pageemo[3]} for **Information Commands**.
+${pageemo[4]} for **Bot Owner Commands**.
+${pageemo[5]} for **Credits**.
+${pageemo[6]} to **exit** the menu.`
+	},
+	{
+		title: "Moderation Commands",
+		description: `
+kb!addrole: Add a role
+kb!ban: Ban a member
+kb!dm: Dm a member
+kb!kick: Kick a member
+kb!mute: Mute a member
+kb!purge: Purge messages
+kb!removerole: Remove a role
+kb!report: Report members
+kb!say: Make the bot say something
+kb!unban: Unban a member
+kb!warn: Warn a member
+kb!poll: Start a poll
+kb!softban:
+kb!lock: Lock this channel, so no one can chat in it
+kb!unlock: Allow the role @ everyone to chat in that channel
+kb!announce: Send an embedded message to the  channel
+kb!whois: Gives brief data on a member
+m!role: Gives the list of members in a certain role`,
+	},
+	
+	{
+		title: "Fun Commands",
+description: `kb!8ball: Ask any question, Kerb;am knows the answer
+m!cat: CATS!!
+m!dog: DOGS!!
+m!draw: Want to draw something? Go ahead
+m!fortnite: Fortnite Stats
+m!gif: Search any gif from GIPHY (NSFW CHANNELS ONLY)
+m!hampster: HAMSTERS!!
+m!morse: Translate anything to morse code
+m!pug: PUGS!!
+m!throw: Throw anything you want at someone
+m!weather: Find weather for any city in the world`,
+	},
+	
+    	{
+		title: "Information Commands",
+		description: `
+m!avatar: Shows the avatar of a member
+m!botinfo: Gives information about MosBot
+m!createinvite: Creates an invite
+m!emojify: Emojify a word!
+m!emojis: Gives the current animated/still emojis in the current guild
+m!topinvites: Gives the current leaderboard of topinvites
+m!ping: Current ping of MosBot
+m!roles: Current roles in the server
+m!serverinfo: Gives information about the current guild
+m!serverlookup: Look up any server, and get information about that guild
+m!servers: Gives a hastebin link of the current servers MosBot is in
+m!stats: Gives stats about MosBot
+m!uptime: Gives the current uptime of MosBot
+m!id: Find a members user ID`,
+	},
+	
+	{
+		title: "Bot Owner Commands",
+		description: `
+**Not ready yet***`,
+	},
+	
+	{
+		title: "Credits",
+		description: `
+***Not ready yet***`,
+	},
+]
+let page = 1; 
+
+module.exports.run = (bot, message, args) => {
+    message.delete(500).catch();
+    let embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setTitle("Loading Help...")
+        //.setDescription("");
+
+    message.channel.send(embed).then(msg => {
+	function reactArrows(arrow) {
+		if (arrow === 7) {
+			embed.setColor("RANDOM");
+			embed.setTitle(pages[0].title); 
+			embed.setDescription(pages[0].description); 
+			msg.edit(embed);
+			return;
+		}
+		msg.react(pageemo[arrow]).then(_ => {
+			reactArrows(arrow + 1);
+		}).catch(e => console.error(`Reaction Error: ${e}`));
+	}
+	function handleReaction(reaction) {
+		// console.log(`${reaction.emoji.name} from ${reaction.users.last().username}`);
+		reaction.remove(reaction.users.last()).catch(e => {
+		    //if (e.code === 50013) reaction.message.channel.send("I need the 'Manage Messages' permission in order to work properly!");
+		});
+		const rid = pageemo.indexOf(reaction.emoji.name);
+		if (rid !== 6) {
+			let embed2 = new Discord.RichEmbed()
+			.setColor("RANDOM")
+			.setTitle(pages[rid].title)
+			.setDescription(pages[rid].description)
+
+			msg.edit(embed2)
+		} else { 
+			msg.delete(500)
+		}
+	    
+	}
+	reactArrows(0)
+	let collector = msg.createReactionCollector((reaction, user) => {return user.id !== msg.client.user.id && pageemo.includes(reaction.emoji.name);}, { time: 180000 }); // 180000 = 3 mins
+        collector.on("collect", (reaction) => {
+            handleReaction(reaction);
         });
-    }
-
-    async run(msg, args) { // eslint-disable-line complexity
-        msg.delete(15000).catch();
-        const groups = this.client.registry.groups;
-        const commands = this.client.registry.findCommands(args.command, false, msg);
-        const showAll = args.command && args.command.toLowerCase() === 'all';
-        if (args.command && !showAll) {
-            if (commands.length === 1) {
-                let help = stripIndents`
-					${oneLine`
-						__Command **${commands[0].name}**:__ ${commands[0].description}
-						${commands[0].guildOnly ? ' (Usable only in servers)' : ''}
-						${commands[0].nsfw ? ' (NSFW)' : ''}
-					`}
-
-					**Format:** ${msg.anyUsage(`${commands[0].name}${commands[0].format ? ` ${commands[0].format}` : ''}`)}
-				`;
-                if (commands[0].aliases.length > 0) help += `\n**Aliases:** ${commands[0].aliases.join(', ')}`;
-                help += `\n${oneLine`
-					**Group:** ${commands[0].group.name}
-					(\`${commands[0].groupID}:${commands[0].memberName}\`)
-				`}`;
-                if (commands[0].details) help += `\n**Details:** ${commands[0].details}`;
-                if (commands[0].examples) help += `\n**Examples:**\n${commands[0].examples.join('\n')}`;
-
-                const messages = [];
-                try {
-                    messages.push(await msg.embed({
-                        color: msg.guild ? msg.member.displayColor : 16711749,
-                        description: help
-                    }));
-                } catch (err) {
-                    messages.push(await msg.embed({
-                        color: msg.guild ? msg.member.displayColor : 16711749,
-                        decription: 'Unable to send you the help message.'
-                    }, '', { reply: this.client.user }));
-                }
-                return messages;
-            } else if (commands.length > 15) {
-                return msg.embed({
-                    color: msg.guild ? msg.member.displayColor : 16711749,
-                    description: 'Multiple commands found. Please be more specific.'
-                }, '', { reply: this.client.user });
-            } else if (commands.length > 1) {
-                return msg.embed({
-                    color: msg.guild ? msg.member.displayColor : 16711749,
-                    description: disambiguation(commands, 'commands')
-                }, '', { reply: this.client.user });
-            } else {
-                return msg.embed({
-                    color: msg.guild ? msg.member.displayColor : 16711749,
-                    description: `Unable to identify command. Use ${msg.usage(
-                        null, msg.channel.type === 'dm' ? null : undefined, msg.channel.type === 'dm' ? null : undefined
-                    )} to view the list of all commands.`
-                }, '', { reply: msg.author });
-            }
-        } else {
-            const messages = [];
-            try {
-                const body = stripIndents`
-				${oneLine`
-					To run a command in ${msg.guild || 'any server'},
-					use ${Command.usage('command', msg.guild ? msg.guild.commandPrefix : null, this.client.user)}.
-					For example, ${Command.usage('prefix', msg.guild ? msg.guild.commandPrefix : null, this.client.user)}.
-				`}
-
-				Use ${this.usage('<command>', null, null)} to view detailed information about a specific command.
-				Use ${this.usage('all', null, null)} to view a list of *all* commands, not just available ones.
-
-				__**${showAll ? 'All commands' : `Available commands in ${msg.guild || 'this DM'}`}**__
-
-				${(showAll ? groups : groups.filter(grp => grp.commands.some(cmd => cmd.isUsable(msg))))
-                        .map(grp => stripIndents`
-						__${grp.name}__
-						${(showAll ? grp.commands : grp.commands.filter(cmd => cmd.isUsable(msg)))
-                                .map(cmd => `**${cmd.name}:** ${cmd.description}${cmd.nsfw ? ' (NSFW)' : ''}`).join('\n')
-                            }
-					`).join('\n\n')
-                    }`;
-
-                if (body.length >= 2000) {
-                    const splitContent = splitMessage(body);
-
-                    for (const part in splitContent) {
-                        let embed = new Discord.RichEmbed()
-                            .setDescription(splitContent[part])
-                            .setColor(`RANDOM`)
-                        messages.push(await msg.direct(embed));
-                    }
-                    if (msg.channel.type === "dm") return;
-                    let embed2 = new Discord.RichEmbed()
-                        .setColor(`RANDOM`)
-                        .setDescription(`Sent the information in your dms.`)
-                        .setFooter(`Requested By ${msg.author.tag}`, msg.author.displayAvatarURL)
-                    if (msg.channel.type === "text") return msg.embed(embed2).then(message => message.delete(15000).catch())
-                } else {
-                    messages.push(await msg.embed({ // eslint-disable-line no-await-in-loop
-                        color: msg.guild ? msg.member.displayColor : 16711749,
-                        description: body
-                    }));
-                }
-            } catch (err) {
-                messages.push(await msg.reply('Unable to send you the help message.'));
-            }
-            return messages;
-        }
-    }
+	collector.on('end',() => msg.delete(500));
+    });
 };
+
+module.exports.help = {
+	perm: "all",
+    name: "help"
+}
