@@ -11,7 +11,7 @@ module.exports.run = (client) => {
     client.user.setPresence({
         status: "Online",
         game: {
-         name: "to use Kerblam Commands use kb!help | Sub to ImReallyCoco",
+         name: "to use Kerblam Commands use kb!help | Join Kerblam's Support Server https://discord.gg/cmymsAY",
          type: "PLAYING"
        }
     })
