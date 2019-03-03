@@ -32,7 +32,7 @@ module.exports = class NCommand extends Command {
             'Black Hole', 'Scams', `Love`, `Hate`, `iPhone`, `Brick`, `Bad Bots`, `Chair`,
             `Lemons`, `Cake`, `Sonic Gauntlet`, `Gummy Bears`, `Bus`, `Train`, `Yourself`, `Doc's Glasses`, `UR MOM`,
             `BlobHeart`, `The Master`, `KSI`, `The Doctor`, `Sonic Screwdriver`, `Cats`, `Dogs`, `Cybermen`, `Memes`, `Youtube Streamer`, `Twitch Streamer`,
-            `Clout`, `Tardis`, `DeeterPlays`, `Kerblam!`, `Doctor's Sonic Nose`
+            `Clout`, `Tardis`, `DeeterPlays`, `Kerblam!`, `Doctor's Sonic Nose`,`Roblox`
         ]
         let result = Math.floor((Math.random() * replies.length));
         let embed = new Discord.RichEmbed()
