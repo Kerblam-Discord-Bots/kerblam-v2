@@ -6,7 +6,7 @@ const Discord = require('discord.js');
 const bot = new CommandoClient({ 
     commandPrefix: "kb!", // This is the bots global prefix
     unknownCommandResponse: false, // This is so the bot doesn't reply if the command names are off
-    owner: ["288491554841034752","297884814978187264"], // Your User ID here
+    owner: [`288491554841034752`,`297884814978187264`,`402663118876049420`,], // Your User ID here
     invite: "https://discord.gg/cmymsAY",
     Twitter: "https://twitter.com/kerblamdiscord",
 
