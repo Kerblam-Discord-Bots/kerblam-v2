@@ -53,8 +53,8 @@ module.exports = class NCommand extends Command {
             .addField(`Server`, `${servername}`, true)
             .addField(`Reason`, `${reason}`)
         rUser.send(rUserembed);
-        let reportschannel = message.guild.channels.find(c => c.name === "kerlogs");
-        if (!reportschannel) return message.channel.send("Couldn't find kerlogs");
+        let reportschannel = message.guild.channels.find(c => c.name === "reportlogs");
+        if (!reportschannel) return message.channel.send("Couldn't find reportlogs");
         message.delete().catch();
         reportschannel.send(reportEmbed);
         message.author.send(dmEmbed);
