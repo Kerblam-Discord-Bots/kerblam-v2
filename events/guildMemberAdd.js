@@ -9,5 +9,7 @@ module.exports.run = (client, member) => {
         .setTimestamp()
         .setDescription(`${member} ${member.user.tag}`)
         .setThumbnail(member.user.displayAvatarURL)
+let tardiswelcome = member.guild.channels.find(c => c.name === "tardiswelcome");
+if(tardiswelcome) return channel.send(`"${member.user.username}" has joined the TARDIS`)
     kerlogs.send(botembed);
 }
