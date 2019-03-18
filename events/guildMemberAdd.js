@@ -9,6 +9,6 @@ module.exports.run = (client, member) => {
         .setDescription(`${member} ${member.user.tag}`)
         .setThumbnail(member.user.displayAvatarURL)
     if(logs) { logs.send(botembed);}
-let channel = member.guild.channels.find(c => c.name === "welcome");
+let channel = member.guild.channels.find(c => c.name === "welcometothetardis");
 if(channel) return channel.send(`**${member.user.username}** has joined the server!`)
 }
