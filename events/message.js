@@ -1,5 +1,14 @@
 const Discord = require('discord.js');
 module.exports.run = async (bot, message) => {
+    
+if(message.guild.id === "437207256241668096"){
+const swears = ["shit", "fuck", "nigga","famous"];
+for (const word of message.content.split(/\s+/g)) {
+  if (!swears.includes(word.toLowerCase())) continue;
+message.delete().catch()
+  message.reply(`Oh no you said a bad word!`)
+}
+}
     if (message.channel.name === "server-suggestions" || message.channel.name === "📝server-suggestions📝" || message.channel.name === "suggestions" || message.channel.name === "suggestion" || message.channel.name === "server-suggestion" || message.channel.name === "📝suggestions" || message.channel.id === "516359903976095755" || message.channel.id === "524090791262683146") {
         if (message.author.id === "515327844449255434" || message.author.id === "288491554841034752" || message.guild.id === "499409162661396481" || message.author.id === message.guild.ownerID) return;
             message.react("✅")
