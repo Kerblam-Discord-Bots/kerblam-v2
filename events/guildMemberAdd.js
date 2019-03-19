@@ -10,5 +10,5 @@ module.exports.run = (client, member) => {
         .setThumbnail(member.user.displayAvatarURL)
     if(logs) { logs.send(botembed);}
 let channel = member.guild.channels.find(c => c.name === "welcometothetardis");
-if(channel) return channel.send(`**${member.user.username} has joined the tardis, Please read the <#546768935551500319>**`)
+if(channel) return channel.send(`**${member} has joined the tardis, Please read the <#546768935551500319>**`)
 }
