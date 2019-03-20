@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message) => {
     
 if(message.guild.id === "437207256241668096"){
-const swears = ["shit", "fuck", "nigga","famous"];
+const swears = ["shit", "fuck", "nigga","blowjob","arse","ass"];
 for (const word of message.content.split(/\s+/g)) {
   if (!swears.includes(word.toLowerCase())) continue;
 message.delete().catch()
-  message.reply(`Oh no you said a bad word!`)
+  message.reply(`Sorry, that word is blacklisted in The TARDIS system. no im not broken`)
 }
 }
     if (message.channel.name === "server-suggestions" || message.channel.name === "📝server-suggestions📝" || message.channel.name === "suggestions" || message.channel.name === "suggestion" || message.channel.name === "server-suggestion" || message.channel.name === "📝suggestions" || message.channel.id === "516359903976095755" || message.channel.id === "524090791262683146") {
