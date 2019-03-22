@@ -5,7 +5,7 @@ module.exports = class AddRoleCommand extends Command {
    constructor(client) {
        super(client, {
            name: "addrole",
-           group: "admin",
+           group: "moderation",
            aliases: ["role+"],
            memberName: "addrole",
            description: "Adds a role to a user",
