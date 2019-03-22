@@ -29,7 +29,7 @@ bot.registry
         ['information', 'Information Commands'],
         ["fun", "Fun Commands"],
         ["botowner", "Bot Owner Commands"],
-        ["admin", "Admin Commands"],
+        ["admin", "Admin Crap"],
         ["moderation", "Moderation Commands"],
         ["imagecommands", "Image Commands"],
         ["tardis", "Tardis Only Commands"]
