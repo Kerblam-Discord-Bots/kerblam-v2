@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message) => {
     
 if(message.guild.id === "437207256241668096"){
-const swears = ["shit", "fuck", "nigga","blowjob","arse","ass","cba","wtf","hell","nigger","dirty nigger","oh my fucking","god","dickhead","bitch","bich","cunt","nibba","kys","stfu","Rape","hoe","h03","shithead","Shitbag","cum","blowjob","kill yourself","n i g g a","B i t c h","F u c k","smexy","sexy","my nigga","twat","whore"];
+const swears = ["shit", "fuck", "nigga","blowjob","arse","ass","cba","wtf","hell","nigger","dirty nigger","oh my fucking","god","dickhead","bitch","bich","cunt","nibba","kys","stfu","Rape","hoe","h03","shithead","Shitbag","cum","blowjob","kill yourself","n i g g a","B i t c h","F u c k","smexy","sexy","my nigga","twat","whore","penis"];
 for (const word of message.content.split(/\s+/g)) {
   if (!swears.includes(word.toLowerCase())) continue;
 message.delete().catch()
