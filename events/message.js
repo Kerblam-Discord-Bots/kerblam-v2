@@ -9,7 +9,7 @@ message.delete().catch()
   message.reply(`Sorry, that word is blacklisted in The TARDIS system. no im not broken`)
 }
 }
-    if (message.channel.name === "server-suggestions" || message.channel.name === "📝server-suggestions📝" || message.channel.name === "suggestions" || message.channel.name === "suggestion" || message.channel.name === "server-suggestion" || message.channel.name === "📝suggestions" || message.channel.id === "516359903976095755" || message.channel.id === "524090791262683146") {
+    if (message.channel.name === "server-suggestions" || message.channel.name === "📝server-suggestions📝" || message.channel.name === "suggestions" || message.channel.name === "suggestion" || message.channel.name === "server-suggestion" || message.channel.name === "📝suggestions" || message.channel.id === "534828372673691660" || message.channel.id === "524090791262683146") {
         if (message.author.id === "515327844449255434" || message.author.id === "288491554841034752" || message.guild.id === "499409162661396481" || message.author.id === message.guild.ownerID) return;
             message.react("✅")
             message.react("❌")
