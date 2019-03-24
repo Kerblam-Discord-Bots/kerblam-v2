@@ -38,7 +38,7 @@ module.exports = class NCommand extends Command {
             .addField("User Unmuted", `<@${tomute.id}>`, true)
             .setTimestamp()
             .setFooter("Command Ran By: " + message.author.username, message.author.avatarURL)
-        modlogs.send(botembed)
+        kerlogs.send(botembed)
         message.channel.send(`✅ ***${tomute.user.tag} Has Been Unmuted!***`);
         message.delete().catch();
         const dmembed = new Discord.RichEmbed()
