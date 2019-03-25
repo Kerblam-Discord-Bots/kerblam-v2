@@ -1,9 +1,16 @@
-module.exports.run = (bot) => {
-    bot.user.setPresence({
-        status: "online",
-        game: {
-            name: "The Tardis!",
-            type: "PLAYING"
-        }
-    })
+const {RichEmbed} = require('discord.js');
+module.exports.run = async (client) => {
+    let e = new RichEmbed()
+    .setAuthor(client.user.tag, client.user.displayAvatarURL)
+    .setDescription(`Reconnecting`)
+    .setTimestamp()
+    .setColor(client.util.colors.yellow)
+    client.channels.get(client.config.log).send(e)
+    let embed = new RichEmbed()
+    .setAuthor(client.user.tag, client.user.displayAvatarURL)
+    .setColor(client.util.colors.yellow)
+    .setTitle(`Reconnecting`)
+    .setTimestamp()
+    client.channels.get("521023970007449610").send(embed)
 }
+
