@@ -18,7 +18,7 @@ module.exports = class StaffCommand extends Command {
         let botembed = new Discord.RichEmbed()
            .setDescription("Assignable Roles")
         .setColor("#000FF")
-        .addField("General Rules", "Notification Ping:🔔\nRoleplay:🏠 \nDalek Role::Dalek:\nAlien:👽\nTimeLord:11thDoctor:")
+        .addField("Assignable Roles", "Notification Ping:🔔\nRoleplay:🏠 \nDalek Role::Dalek:\nAlien:👽\nTimeLord:11thDoctor:")
         .addBlankField()
         .addField("Note", "You can take these off at any time")
     message.channel.send(botembed);
